@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    height: 85%;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    padding: 5vw 10vw;
+}
+
+.left{
+    height: 100%;
+    width: 45%;
+    /* background: #222; */
+    background-position: center;
+    background-size: cover;
+}
+
+.right{
+    height: 100%;
+    width: 55%;
+    /* background-color: lightblue; */
+    padding: 0 3vw;
+    
+}
+.right h3{
+    font-size: 4vw;
+}
+
+.all-song{
+    /* background-color: burlywood; */
+    height: 85%;
+    margin-top: 30px;
+}
+.song-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #5a5a5a;
+    padding: 18px 15px;
+}
+.song-card:hover{
+    background-color: #2e2e2e;
+}
+
+.song-card:nth-last-child(1){
+    border-bottom: 1px solid #5a5a5a;
+}
+
+.song-card .part1{
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.song-card img{
+    height: 55px;
+    width: 55px;
+    margin-right: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+.song-card h2{
+    font-size: 22px;
+}
+.song-card h3{
+    font-size: 16px;
+}
+
+.palyer{
+    height: 15%;
+    width: 100%;
+    /* background-color: #0e0e0e; */
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+}
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+.palyer h3{
+    padding: 10px;
+    background-color: #2e2e2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.palyer h3 i{
+    font-size: 24px;
+}
+.palyer h3:active{
+    scale: 0.93;
+}
+
+.volume {
+    width: 150px;
+    position: absolute;
+    right: 13%;
+}
+
+#volume-slider {
+    width: 100%;
+}
+
+/* For tablets and larger screens */
+@media (min-width: 768px) {
+    main {
+        padding: 5vw;
+        display: flex;
+        flex-direction: row;
+    }
+    .left {
+        width: 45%;
+    }
+    .right {
+        width: 55%;
+        padding: 0 3vw;
+    }
+    .volume {
+        right: 8%;
+        /* display: flex; */
+    }
+}
+
+/* For smaller screens like phones */
+@media (max-width: 767px) {
+    main {
+        padding: 5vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .left, .right {
+        width: 100%;
+    }
+
+    .palyer{
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 8%;
+    }
+    .volume {
+        /* right: 5%; */
+        width: 25%;
+    }
+}
